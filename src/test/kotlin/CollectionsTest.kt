@@ -33,7 +33,24 @@ class CollectionsTest {
     }
 
     // 2. Set
+    @Test
+    fun ImmutableSet() {
+        val set = setOf(1, 2, 3, 1, 1)
 
+//        set.add
+    }
+
+    @Test
+    fun MutableSet() { // 변경이 가능한 List
+        val set = mutableSetOf(1, 2, 3)
+        set.add(4)
+        set.add(1)
+        set.add(1)
+        set.add(1)
+        set.add(1)
+        set.add(1)
+        println(set)
+    }
 
 
     // 3. Map
