@@ -37,12 +37,17 @@ class ControlFlow {
     // while
     @Test
     fun `while`() {
-        val count = 0
-        var counter = 0
+//      val count = 0 // val 변경 불가
+        var count = 0
+        var sum = 0 // 변경 가능함
 
         while (count < 5) {
-
+            sum += count
+            count++
         }
+
+        // sum = 0 + 1 + 2 + 3 + 4
+        assertEquals(10, sum)
     }
 
 
