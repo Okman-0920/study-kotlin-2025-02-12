@@ -12,7 +12,7 @@ class ControlFlow {
 
     private fun max(num1: Int, num2: Int): Int = /* return 타입 */ if (num1 > num2) num1 else num2
 
-    // when
+    // when - if랑 비슷하지만 가독성을 고려하여 사용한다, switch와 비슷함..
     @Test
     fun `when`() {
         val numberType1 = getNumberType(10)
@@ -35,6 +35,16 @@ class ControlFlow {
     }
 
     // while
+    @Test
+    fun `while`() {
+        val count = 0
+        var counter = 0
+
+        while (count < 5) {
+
+        }
+    }
+
 
 
     // for
