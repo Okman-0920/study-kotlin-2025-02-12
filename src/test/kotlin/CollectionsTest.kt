@@ -34,14 +34,14 @@ class CollectionsTest {
 
     // 2. Set
     @Test
-    fun ImmutableSet() {
+    fun immutableSet() {
         val set = setOf(1, 2, 3, 1, 1)
 
 //        set.add
     }
 
     @Test
-    fun MutableSet() { // 변경이 가능한 List
+    fun mutableSet() { // 변경이 가능한 List
         val set = mutableSetOf(1, 2, 3)
         set.add(4)
         set.add(1)
@@ -54,4 +54,30 @@ class CollectionsTest {
 
 
     // 3. Map
+    @Test
+    fun immutableMap() {
+        val map = mapOf("Apple" to 100, "Banana" to 200, "Orange" to 300)
+        println(map)
+
+        // 에플리라는 키에 접속하면 뭐가나오니?
+        assertEquals(100, map["Apple"])
+        assertEquals(200, map["Banana"])
+        assertEquals(300, map["Orange"])
+
+        // map["Apple"] = 300 300변경해줘  못함
+    }
+
+    @Test
+    fun mutableMap() { // 변경이 가능한 List
+        val map = mutableMapOf("Apple" to 100, "Banana" to 200, "Orange" to 300)
+        println(map)
+
+        // 에플리라는 키에 접속하면 뭐가나오니?
+        assertEquals(100, map["Apple"])
+        assertEquals(200, map["Banana"])
+        assertEquals(300, map["Orange"])
+
+        map["Apple"] = 300
+        assertEquals(300, map["Apple"])
+    }
 }
