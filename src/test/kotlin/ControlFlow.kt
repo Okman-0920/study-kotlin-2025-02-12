@@ -51,6 +51,16 @@ class ControlFlow {
     }
 
 
-
     // for
+    @Test
+    fun `for`() {
+        val list = listOf(1, 2, 3, 4, 5)
+        var sum = 0 // var 은 값이 변할 수 있다.
+
+        for (number in list) { // in절은 list를 순회하면서 하나씩 접근하는 것
+            sum = sum + number
+        }
+
+        assertEquals(15, sum)
+    }
 }
